@@ -1,7 +1,6 @@
-FROM mcr.microsoft.com/playwright/python:v1.44.0-focal
+FROM mcr.microsoft.com/playwright/python:v1.50.0-noble
 
-RUN pip install boto3 playwright
-RUN pip install https://github.com/aws/aws-lambda-python-runtime-interface-client/releases/download/v2.0.1/aws_lambda_ric-2.0.1-py3-none-any.whl
+RUN pip install boto3 playwright aws-lambda-ric==1.11.0
 
 RUN playwright install chromium
 
